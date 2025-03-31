@@ -54,6 +54,7 @@ venv.bak/
 # Database
 *.sqlite3
 *.db
+jobs.db
 
 # Testing
 .coverage
@@ -86,3 +87,7 @@ docker-compose.override.yml
 
 # Sphinx documentation
 docs/_build/
+
+# chromedriver
+chromedriver
+
