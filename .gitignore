@@ -1,0 +1,88 @@
+# Byte-compiled Python files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Virtual environments
+/.venv
+/pip-wheel-metadata
+/build/
+/develop-eggs/
+/dist/
+/downloads/
+/eggs/
+/.eggs/
+/lib/
+/lib64/
+/parts/
+/sdist/
+/var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+
+# Environments
+.env
+.flaskenv
+
+# Log files
+*.log
+
+# Database
+*.sqlite3
+*.db
+
+# Testing
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+
+# Local configuration files
+local_settings.py
+settings_local.py
+
+# Docker
+docker-compose.override.yml
+
+# Sphinx documentation
+docs/_build/
