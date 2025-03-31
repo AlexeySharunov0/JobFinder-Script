@@ -139,5 +139,7 @@ python -c "import platform; print(platform.architecture())"
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first.
 
+## License
 
+MIT License - see LICENSE file for details.
 
