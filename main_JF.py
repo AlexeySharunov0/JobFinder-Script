@@ -18,6 +18,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 import webbrowser
 import logging
 
+# Setup selenium
+service = ChromeService("/Users/alexeysharunov/Desktop/JobFinder-Script/chromedriver")
+driver = webdriver.Chrome(service=service)
+
 # Setup logging to keep track of what happens in the program
 logging.basicConfig(filename='job_finder.log', level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
