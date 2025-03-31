@@ -9,7 +9,7 @@ A powerful and interactive desktop application designed to streamline online lea
 - **Assignment Management:** Submit and track assignment progress.
 - **Progress Tracking:** View course completion status and grades.
 - **Data Export:** Export student progress to Excel.
-- **Interactive UI:** PyQt6-based graphical interface for smooth navigation.
+- **Interactive UI:** Tkinter-based graphical interface for smooth navigation.
 
 ## Installation & Setup
 
