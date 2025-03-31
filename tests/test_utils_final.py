@@ -1,3 +1,8 @@
+import sys
+import os
+import asyncio
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import pytest
 import time
 from unittest.mock import MagicMock, patch
@@ -11,8 +16,13 @@ def test_random_sleep():
 def test_random_mouse_action():
     driver_mock = MagicMock()
     element_mock = MagicMock()
+    # Set up the mock to have the necessary attributes
+    element_mock.size = {'width': 100, 'height': 100}
+    element_mock.location = {'x': 0, 'y': 0}
+    
     random_mouse_action(driver_mock, element_mock)
-    element_mock.click.assert_called_once()  # Assuming click is one of the actions
+    # Check that the actions were performed
+    assert driver_mock.execute_script.called  # Ensure the script was executed
 
 def test_calculate_similarity():
     user_skills = "Python, Java"
@@ -40,8 +50,10 @@ def test_start_automation(create_database_mock, webdriver_mock):
     driver_mock = MagicMock()
     webdriver_mock.return_value = driver_mock
     
-    # Call the function
-    job_titles, job_links, job_descriptions, job_matching_percentage = start_automation(login, password, parameters, start_page, end_page, user_skills)
+    # Call the function using asyncio.run
+    job_titles, job_links, job_descriptions, job_matching_percentage = asyncio.run(
+        start_automation(login, password, parameters, start_page, end_page, user_skills)
+    )
     
     # Assertions can be added based on expected outcomes
     assert isinstance(job_titles, list)
